@@ -15,6 +15,57 @@ st.set_page_config(
 )
 
 # --- CUSTOM CSS STYLING ---
+st.markdown("""
+    <style>
+    /* Main dashboard spacing */
+    .main .block-container {
+        padding-top: 1.8rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Metric cards: background, border and spacing */
+    [data-testid="stMetric"] {
+        background-color: #1e293b !important;
+        border: 1px solid #475569 !important;
+        padding: 18px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        min-height: 125px;
+    }
+
+    /* Card labels */
+    [data-testid="stMetricLabel"],
+    [data-testid="stMetricLabel"] p {
+        color: #cbd5e1 !important;
+        font-size: 14px !important;
+    }
+
+    /* Main metric values */
+    [data-testid="stMetricValue"],
+    [data-testid="stMetricValue"] div {
+        color: #ffffff !important;
+        font-size: 25px !important;
+        font-weight: 700 !important;
+    }
+
+    /* Metric delta, such as Score: 71.8 */
+    [data-testid="stMetricDelta"] {
+        color: #4ade80 !important;
+    }
+
+    /* Dashboard background */
+    .stApp {
+        background-color: #0f172a;
+    }
+
+    /* Sidebar background */
+    [data-testid="stSidebar"] {
+        background-color: #111827;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# --- CUSTOM CSS STYLING ---
 
 # --- CUSTOM CSS STYLING ---
 st.markdown("""
