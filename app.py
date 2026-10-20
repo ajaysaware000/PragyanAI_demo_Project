@@ -15,20 +15,40 @@ st.set_page_config(
 )
 
 # --- CUSTOM CSS STYLING ---
+
+# --- CUSTOM CSS STYLING ---
 st.markdown("""
     <style>
     .main .block-container {
         padding-top: 1.8rem;
         padding-bottom: 2rem;
     }
+
+    /* Metric card background and border */
     .stMetric {
-        background-color: #f8fafc;
-        border: 1px solid #e2e8f0;
+        background-color: #1e293b !important;
+        border: 1px solid #475569 !important;
         padding: 14px;
-        border-radius: 10px;
+        border-radius: 12px;
+    }
+
+    /* Metric title */
+    [data-testid="stMetricLabel"] {
+        color: #e2e8f0 !important;
+    }
+
+    /* Metric value */
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+    }
+
+    /* Metric change / delta */
+    [data-testid="stMetricDelta"] {
+        color: #4ade80 !important;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 # --- DATABASE AUTO-INITIALIZATION (Zero-Config for Streamlit Cloud) ---
 @st.cache_data
